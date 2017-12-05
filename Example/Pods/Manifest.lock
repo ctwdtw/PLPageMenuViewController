@@ -1,5 +1,11 @@
 PODS:
-  - PLPageMenuViewController (0.1.0)
+  - PLPageMenuViewController (0.1.0):
+    - Reusable
+  - Reusable (4.0.0):
+    - Reusable/Storyboard (= 4.0.0)
+    - Reusable/View (= 4.0.0)
+  - Reusable/Storyboard (4.0.0)
+  - Reusable/View (4.0.0)
 
 DEPENDENCIES:
   - PLPageMenuViewController (from `../`)
@@ -9,7 +15,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PLPageMenuViewController: a780023d18ed5201d4e001aeeacd12f9b02cfb44
+  PLPageMenuViewController: 51d269afa149d9806ffc0b84fd62f16f7b5fd61a
+  Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
 
 PODFILE CHECKSUM: 0045da89cd364cd2db6e5583c016d0075c662865
 

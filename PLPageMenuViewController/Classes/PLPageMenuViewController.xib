@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PLPageMenuViewController" customModule="HealthToAllFlesh" customModuleProvider="target">
+            <connections>
+                <outlet property="contentCollectionView" destination="Kt8-w6-mHv" id="E0I-dm-PAR"/>
+                <outlet property="menuView" destination="Esz-fX-O26" id="xCK-3p-QeJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-fX-O26" userLabel="MenuView" customClass="PLPageMenuView" customModule="HealthToAllFlesh" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="X8R-l1-1Ow"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltA-y4-Ypf" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Kt8-w6-mHv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sfb-vY-YHn">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Kt8-w6-mHv" secondAttribute="trailing" id="I5Z-dZ-Pvf"/>
+                        <constraint firstAttribute="bottom" secondItem="Kt8-w6-mHv" secondAttribute="bottom" id="Z73-Tl-eNX"/>
+                        <constraint firstItem="Kt8-w6-mHv" firstAttribute="top" secondItem="ltA-y4-Ypf" secondAttribute="top" id="cin-Ah-cMk"/>
+                        <constraint firstItem="Kt8-w6-mHv" firstAttribute="leading" secondItem="ltA-y4-Ypf" secondAttribute="leading" id="wFR-iw-ODx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Esz-fX-O26" secondAttribute="trailing" id="1FD-my-7Iy"/>
+                <constraint firstItem="Esz-fX-O26" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Aer-EB-wzf"/>
+                <constraint firstItem="ltA-y4-Ypf" firstAttribute="top" secondItem="Esz-fX-O26" secondAttribute="bottom" id="Dx6-PZ-Cha"/>
+                <constraint firstAttribute="trailing" secondItem="ltA-y4-Ypf" secondAttribute="trailing" id="FbZ-or-iZN"/>
+                <constraint firstItem="ltA-y4-Ypf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wcl-gs-D1c"/>
+                <constraint firstItem="Esz-fX-O26" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="X2b-tH-D92"/>
+                <constraint firstAttribute="bottom" secondItem="ltA-y4-Ypf" secondAttribute="bottom" constant="49" id="dQC-Om-UN9"/>
+            </constraints>
+            <point key="canvasLocation" x="56.5" y="122.5"/>
+        </view>
+    </objects>
+</document>

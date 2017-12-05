@@ -1,8 +1,8 @@
 {
   "name": "PLPageMenuViewController",
   "version": "0.1.0",
-  "summary": "A short description of PLPageMenuViewController.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A simple UI component enable primary paging effect between view controllers.",
+  "description": "A simple UI component enable primary paging effect between view controllers. The paging effect is resort to UICollectionView's animation effect.",
   "homepage": "https://github.com/ctwdtw/PLPageMenuViewController",
   "license": {
     "type": "MIT",
@@ -16,7 +16,12 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "PLPageMenuViewController/Classes/**/*"
+  "source_files": "PLPageMenuViewController/Classes/**/*",
+  "dependencies": {
+    "Reusable": [
+
+    ]
+  }
 }

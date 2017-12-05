@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PLPageMenuView" customModule="HealthToAllFlesh" customModuleProvider="target">
+            <connections>
+                <outlet property="ItemViewContainer" destination="CRk-Jy-2hw" id="Q3C-U4-Tga"/>
+                <outlet property="pageIndicatorLeading" destination="PCG-fE-3KA" id="CkZ-J5-NTa"/>
+                <outlet property="pageIndicatorWidth" destination="of6-Vn-IFb" id="qDL-Vb-GiU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRP-Tb-EZm" userLabel="Page Indicator">
+                    <rect key="frame" x="0.0" y="40" width="100" height="4"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="S5E-nd-YQP"/>
+                        <constraint firstAttribute="width" constant="100" id="of6-Vn-IFb"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CRk-Jy-2hw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CRk-Jy-2hw" secondAttribute="trailing" id="CYP-Sk-1P9"/>
+                <constraint firstItem="CRk-Jy-2hw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JqV-X6-KuD"/>
+                <constraint firstItem="CRk-Jy-2hw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OxG-vb-hZC"/>
+                <constraint firstAttribute="bottom" secondItem="lRP-Tb-EZm" secondAttribute="bottom" id="P4t-yq-Ty6"/>
+                <constraint firstItem="lRP-Tb-EZm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PCG-fE-3KA"/>
+                <constraint firstItem="lRP-Tb-EZm" firstAttribute="top" secondItem="CRk-Jy-2hw" secondAttribute="bottom" id="mE5-dM-Vae"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="54.5" y="82"/>
+        </view>
+    </objects>
+</document>
