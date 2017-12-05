@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PLPageMenuViewController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PLPageMenuViewController.'
+  s.summary          = 'A simple UI component enable primary paging effect between view controllers.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A simple UI component enable primary paging effect between view controllers. The paging effect is resort to UICollectionView's animation effect.
                        DESC
 
   s.homepage         = 'https://github.com/ctwdtw/PLPageMenuViewController'
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/ctwdtw/PLPageMenuViewController.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'PLPageMenuViewController/Classes/**/*'
   
@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Reusable'
 end

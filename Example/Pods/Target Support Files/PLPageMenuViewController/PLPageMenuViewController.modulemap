@@ -1,0 +1,6 @@
+framework module PLPageMenuViewController {
+  umbrella header "PLPageMenuViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
