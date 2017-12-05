@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PLPageMenuViewController_Example' do
+  pod 'PLPageMenuViewController', :path => '../'
+
+  target 'PLPageMenuViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
