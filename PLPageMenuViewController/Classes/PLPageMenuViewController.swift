@@ -108,6 +108,7 @@ open class PLPageMenuViewController: UIViewController {
   
   override open func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    // TODO: ugly code
     showNavigationTitle()
   }
   
