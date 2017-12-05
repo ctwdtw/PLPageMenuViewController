@@ -48,7 +48,7 @@ open class PLPageMenuViewController: UIViewController {
   
   private var navigationItemTitle = ""
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+  public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
   }
   
