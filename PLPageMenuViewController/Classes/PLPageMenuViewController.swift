@@ -128,14 +128,18 @@ open class PLPageMenuViewController: UIViewController {
       guard let vc = newValue.self else {
         return
       }
+      #if DEBUG
       print("currentViewContrller is \(vc) )")
+      #endif
     }
     
     didSet {
       guard let vc = oldValue.self else {
         return
       }
+      #if DEBUG
       print("previousViewController is \(vc)")
+      #endif
     }
   }
   
@@ -169,7 +173,9 @@ open class PLPageMenuViewController: UIViewController {
     guard let nextVCIndex = willDispalyIndex?.item,
       let previousVCIndex = didEndDispayIndex?.item,
       nextVCIndex != previousVCIndex else {
+        #if DEBUG
         print("bounceback")
+        #endif
         return
     }
     
@@ -229,9 +235,10 @@ extension PLPageMenuViewController: UICollectionViewDataSource {
     let childViewController = childViewControllers[indexPath.row]
     render(childViewController, in: cell.contentView)
     
+    #if DEBUG
     cell.debuglabel.text = "\(indexPath.item)"
     cell.contentView.bringSubview(toFront: cell.debuglabel)
-    
+    #endif
   }
 }
 
