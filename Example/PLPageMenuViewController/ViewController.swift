@@ -23,8 +23,6 @@ class ViewController: PLPageMenuViewController {
   }
   
   override func configurePages() {
-    let navigationItemTitle = "I have a Navigation Item"
-    let itemNames = ["RedVC", "GreenVC", "BlueVC"]
     
     let redVC = UIViewController()
     redVC.view.backgroundColor = .red
@@ -34,9 +32,15 @@ class ViewController: PLPageMenuViewController {
     blueVC.view.backgroundColor = .blue
     
     let vcs = [redVC, greenVC, blueVC]
+    let navigationItemTitle = "I have a Navigation Item"
+    let itemNames = ["RedVC", "GreenVC", "BlueVC"]
+    let menuViewSetting = PLPageMenuViewParameter(itemNames: itemNames,
+                                                  itemColor: .green,
+                                                  backgroundColor: .gray,
+                                                  indicatorColor: .black)
     
     let parameter = PLPageParameters(navigationItemTitle: navigationItemTitle,
-                                     pageItemNames: itemNames,
+                                     menuViewParameter: menuViewSetting,
                                      viewControllers: vcs)
     setPageParameters(parameter)
   }

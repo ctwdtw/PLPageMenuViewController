@@ -10,12 +10,31 @@ import UIKit
 import Reusable
 
 extension PLPageMenuView: NibOwnerLoadable {}
+
+public struct PLPageMenuViewParameter {
+  var itemNames: [String] = []
+  var backgroundColor = UIColor.red
+  var itemColor = UIColor.white
+  var indicatorColor = UIColor.gray
+  
+  public init(itemNames: [String],
+              itemColor: UIColor,
+              backgroundColor: UIColor,
+              indicatorColor: UIColor) {
+    self.itemNames = itemNames
+    self.itemColor = itemColor
+    self.backgroundColor = backgroundColor
+    self.indicatorColor = indicatorColor
+  }
+  
+  public init() {}
+}
+
 class PLPageMenuView: UIView {
   @IBOutlet weak var pageIndicatorLeading: NSLayoutConstraint!
   @IBOutlet weak var pageIndicatorWidth: NSLayoutConstraint!
   @IBOutlet weak var ItemViewContainer: UIStackView!
   var delegateVC: PLMenuViewDelegate?
-  //@IBOutlet var view: UIView!
 
   private(set) var numberOfSlice: Int = 0 {
     didSet {
@@ -28,6 +47,8 @@ class PLPageMenuView: UIView {
       numberOfSlice = newValue.count
     }
   }
+  
+  var itemColor = UIColor.white
 
   override func layoutSubviews() {
     super.layoutSubviews()
@@ -49,6 +70,7 @@ class PLPageMenuView: UIView {
       let button = UIButton()
       button.setTitle(itemName, for: .normal)
       button.titleLabel?.textAlignment = .center
+      button.setTitleColor(itemColor, for: .normal)
       button.tag = idx
       button.addTarget(self, action: #selector(self.itemBtnDidPressed(_:)), for: .touchUpInside)
       ItemViewContainer.addArrangedSubview(button)

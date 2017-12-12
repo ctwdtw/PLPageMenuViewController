@@ -17,22 +17,20 @@ protocol PLMenuViewDelegate: class {
 
 public struct PLPageParameters {
   var navigationItemTitle = ""
-  var pageItemNames: [String] = []
+  var menuViewParameter = PLPageMenuViewParameter()
   var viewControllers: [UIViewController] = []
   
   public init(navigationItemTitle: String,
-              pageItemNames: [String],
+              menuViewParameter: PLPageMenuViewParameter,
               viewControllers: [UIViewController]) {
     self.navigationItemTitle = navigationItemTitle
-    self.pageItemNames = pageItemNames
+    self.menuViewParameter = menuViewParameter
     self.viewControllers = viewControllers
   }
 }
 
 open class PLPageMenuViewController: UIViewController {
-  //@IBOutlet weak var contentCollectionView: UICollectionView!
-  //@IBOutlet weak var menuView: PLPageMenuView!
-  private var contentCollectionView: UICollectionView = {
+    private var contentCollectionView: UICollectionView = {
     let flowLayout = UICollectionViewFlowLayout()
     flowLayout.scrollDirection = .horizontal
     
@@ -53,8 +51,8 @@ open class PLPageMenuViewController: UIViewController {
   }
   
   public required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder) //load navigation mechanism from storyboard
-    //loadRootViewFromNib()
+    super.init(coder: aDecoder) //add this line to load segue mechanism from storyboard
+    //loadRootViewFromNib() //TODO:// add nibBased protocol for UIViewController in `Reuseable` Pod
   }
   
   override open func viewDidLoad() {
@@ -70,7 +68,10 @@ open class PLPageMenuViewController: UIViewController {
   
   public func setPageParameters(_ parameter: PLPageParameters) {
     navigationItemTitle = parameter.navigationItemTitle
-    menuView.itemNames = parameter.pageItemNames
+    menuView.itemNames = parameter.menuViewParameter.itemNames
+    menuView.subviews.first?.backgroundColor = parameter.menuViewParameter.backgroundColor
+    menuView.subviews.first?.subviews.first?.backgroundColor = parameter.menuViewParameter.indicatorColor
+    menuView.itemColor = parameter.menuViewParameter.itemColor
     setChildViewControllers(parameter.viewControllers)
   }
   
@@ -108,7 +109,6 @@ open class PLPageMenuViewController: UIViewController {
   
   override open func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    // TODO: ugly code
     showNavigationTitle()
   }
   
