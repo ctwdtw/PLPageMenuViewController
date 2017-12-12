@@ -123,7 +123,7 @@ open class PLPageMenuViewController: UIViewController {
   }
   
   
-  fileprivate var currentViewController: UIViewController! {
+  private var currentViewController: UIViewController! {
     willSet {
       guard let vc = newValue.self else {
         return
@@ -153,7 +153,7 @@ open class PLPageMenuViewController: UIViewController {
     currentViewController = childViewControllers.first
   }
   
-  fileprivate func render(_ viewController: UIViewController, in view: UIView) {
+  private func render(_ viewController: UIViewController, in view: UIView) {
     guard let subView = viewController.view else {
       return
     }
@@ -161,15 +161,15 @@ open class PLPageMenuViewController: UIViewController {
     view.addSubview(subView)
   }
   
-  fileprivate func updateMenuViewWhenScrollViewDidScroll(_ scrollView: UIScrollView) {
+  private func updateMenuViewWhenScrollViewDidScroll(_ scrollView: UIScrollView) {
     let offset = scrollView.contentOffset.x / CGFloat(childViewControllers.count)
     menuView.scrollPageIndicator(for: offset)
   }
   
-  fileprivate var willDispalyIndex: IndexPath?
-  fileprivate var didEndDispayIndex: IndexPath?
+  private var willDispalyIndex: IndexPath?
+  private var didEndDispayIndex: IndexPath?
   
-  fileprivate func checkMoving() {
+  private func checkMoving() {
     guard let nextVCIndex = willDispalyIndex?.item,
       let previousVCIndex = didEndDispayIndex?.item,
       nextVCIndex != previousVCIndex else {
