@@ -237,6 +237,7 @@ extension PLPageMenuViewController: UICollectionViewDataSource {
     
     #if DEBUG
     cell.debuglabel.text = "\(indexPath.item)"
+    cell.addDebugLabelToContentView()
     cell.contentView.bringSubview(toFront: cell.debuglabel)
     #endif
   }

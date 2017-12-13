@@ -15,14 +15,17 @@ class PLPageMenuContentViewCell: UICollectionViewCell {
     let label = UILabel(frame: frame)
     return label
   }()
-
+  
+  func addDebugLabelToContentView() {
+    contentView.addSubview(debuglabel)
+  }
+  
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    contentView.addSubview(debuglabel)
   }
 
   override func awakeFromNib() {
@@ -31,6 +34,12 @@ class PLPageMenuContentViewCell: UICollectionViewCell {
 
   override func prepareForReuse() {
     super.prepareForReuse()
+    removeOverlappedViewControllerViews()
+  }
+  
+  //makesure there will be only one viewController view on the cell contenView at one time
+  //so that there will not be memory issue
+  private func removeOverlappedViewControllerViews() {
     if contentView.subviews.count > 0 {
       contentView.subviews.forEach { $0.removeFromSuperview() }
     }
