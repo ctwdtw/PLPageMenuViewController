@@ -37,7 +37,7 @@ class ViewController: PLPageMenuViewController {
     let menuViewSetting = PLPageMenuViewParameter(itemNames: itemNames,
                                                   itemColor: .green,
                                                   backgroundColor: .gray,
-                                                  indicatorColor: .black)
+                                                  indicatorColor: .yellow)
     
     let parameter = PLPageParameters(navigationItemTitle: navigationItemTitle,
                                      menuViewParameter: menuViewSetting,

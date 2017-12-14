@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PLPageMenuViewController'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A simple UI component enable primary paging effect between view controllers.'
 
 # This description is used to generate tags and improve search results.

@@ -1,5 +1,5 @@
 PODS:
-  - PLPageMenuViewController (0.1.0):
+  - PLPageMenuViewController (0.2.1):
     - Reusable
   - Reusable (4.0.0):
     - Reusable/Storyboard (= 4.0.0)
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PLPageMenuViewController: 51d269afa149d9806ffc0b84fd62f16f7b5fd61a
+  PLPageMenuViewController: 1ddf2f63c62478a6d37ce979040aeb69619423f4
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
 
-PODFILE CHECKSUM: 0045da89cd364cd2db6e5583c016d0075c662865
+PODFILE CHECKSUM: 489d5f959dace0144881c41efa315271df065480
 
 COCOAPODS: 1.3.1

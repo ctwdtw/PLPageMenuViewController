@@ -1,7 +1,5 @@
 import UIKit
 import XCTest
-import PLPageMenuViewController
-
 class Tests: XCTestCase {
     
     override func setUp() {

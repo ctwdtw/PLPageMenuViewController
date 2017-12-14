@@ -33,7 +33,7 @@ open class PLPageMenuViewController: UIViewController {
     private var contentCollectionView: UICollectionView = {
     let flowLayout = UICollectionViewFlowLayout()
     flowLayout.scrollDirection = .horizontal
-    
+      
     let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
     collectionView.isPagingEnabled = true
     return collectionView
@@ -57,7 +57,8 @@ open class PLPageMenuViewController: UIViewController {
   
   override open func viewDidLoad() {
     super.viewDidLoad()
-    edgesForExtendedLayout = [.bottom, .left, .right]
+    //TODO:// use other method to fix rotation bug
+    //edgesForExtendedLayout = [.bottom, .left, .right]
     assemblingSubviews()
     configureSubviews()
   }
@@ -112,8 +113,11 @@ open class PLPageMenuViewController: UIViewController {
     showNavigationTitle()
   }
   
-  override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+  override open func viewWillTransition(to size: CGSize,
+                                        with coordinator: UIViewControllerTransitionCoordinator) {
+    
     super.viewWillTransition(to: size, with: coordinator)
+    
     contentCollectionView.collectionViewLayout.invalidateLayout()
     
     let index = childViewControllers.index(of: self.currentViewController)

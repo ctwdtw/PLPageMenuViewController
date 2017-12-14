@@ -34,7 +34,7 @@ class PLPageMenuContentViewCell: UICollectionViewCell {
 
   override func prepareForReuse() {
     super.prepareForReuse()
-    removeOverlappedViewControllerViews()
+
   }
   
   //makesure there will be only one viewController view on the cell contenView at one time
