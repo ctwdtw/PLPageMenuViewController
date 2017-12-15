@@ -113,19 +113,16 @@ open class PLPageMenuViewController: UIViewController {
     showNavigationTitle()
   }
   
-  override open func viewWillTransition(to size: CGSize,
-                                        with coordinator: UIViewControllerTransitionCoordinator) {
-    
-    super.viewWillTransition(to: size, with: coordinator)
-    
+  open override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
     contentCollectionView.collectionViewLayout.invalidateLayout()
-    
-    let index = childViewControllers.index(of: self.currentViewController)
-    coordinator.animate(alongsideTransition: nil) { (_) in
-      self.scrollToPage(page: index!, animated: false)
-    }
   }
   
+  open override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    let index = childViewControllers.index(of: self.currentViewController)
+    self.scrollToPage(page: index!, animated: false)
+  }
   
   private var currentViewController: UIViewController! {
     willSet {
